@@ -15,7 +15,7 @@ def get_music():
     }
     response = requests.get(url, headers=headers)
     data = response.json()
-    return jsonify(data["record"])
+    return jsonify(data.get("record, data"))
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
